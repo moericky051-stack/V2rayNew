@@ -1,0 +1,6 @@
+{
+  "name": "Secure V2Ray VPN",
+  "description": "Professional V2Ray VPN Ecosystem with Multi-Protocol VLESS/VMess/Trojan/Reality support, Server Ping test, Speed meter, Admin Management, and Subscription Payments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

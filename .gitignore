@@ -1,0 +1,28 @@
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Gradle files
+.gradle/
+build/
+app/build/
+
+# IDE / Editor files
+.idea/
+*.iml
+.vscode/
+
+# Local configuration file
+local.properties
+
+# Log files
+*.log
+
+# Node dependencies
+node_modules/
+npm-debug.log*
+
+# Environment files
+.env

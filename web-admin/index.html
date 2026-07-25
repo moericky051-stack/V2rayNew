@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure V2Ray VPN - Web Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">
+      <h2>SECURE V2RAY</h2>
+      <span class="badge">ADMIN PANEL</span>
+    </div>
+    <nav>
+      <a href="#stats" class="active">Dashboard Stats</a>
+      <a href="#servers">VPS Nodes Manager</a>
+      <a href="#payments">KBZ/Wave Payments</a>
+      <a href="#users">Users & Subscriptions</a>
+    </nav>
+  </div>
+
+  <main class="content">
+    <header>
+      <h1>Web Admin Dashboard</h1>
+      <div class="server-status">
+        <span class="indicator online"></span> Xray Core Core: v1.8.11 Online
+      </div>
+    </header>
+
+    <!-- Stats Grid -->
+    <section class="stats-grid">
+      <div class="card stat-card">
+        <h3>Total Registered Users</h3>
+        <p class="value">1,420</p>
+      </div>
+      <div class="card stat-card">
+        <h3>Active VPN Connections</h3>
+        <p class="value cyan">384</p>
+      </div>
+      <div class="card stat-card">
+        <h3>Total Bandwidth Served</h3>
+        <p class="value emerald">14.8 TB</p>
+      </div>
+      <div class="card stat-card">
+        <h3>Pending KBZ/Wave Approvals</h3>
+        <p class="value amber" id="pending-count">1</p>
+      </div>
+    </section>
+
+    <!-- VPS Nodes Section -->
+    <section class="card section-card">
+      <div class="section-header">
+        <h2>VPS Server Nodes</h2>
+        <button class="btn btn-primary" onclick="addNodePrompt()">+ Add New VPS Server</button>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Protocol</th>
+            <th>Address & Port</th>
+            <th>Region</th>
+            <th>Type</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="servers-table-body">
+          <!-- Dynamically populated -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Payments Approval Section -->
+    <section class="card section-card">
+      <h2>Pending Payment Approvals (KBZ Pay & Wave Money)</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Payment Method</th>
+            <th>Plan</th>
+            <th>Amount</th>
+            <th>Transaction ID</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="payments-table-body">
+          <!-- Dynamically populated -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

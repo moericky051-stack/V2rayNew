@@ -22,23 +22,8 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Debug - Check files
-        run: |
-          echo "=== Current directory ==="
-          pwd
-          echo "=== List root files ==="
-          ls -la
-          echo "=== Check gradlew ==="
-          ls -la gradlew || echo "gradlew NOT FOUND"
-          echo "=== Check gradle wrapper ==="
-          ls -la gradle/wrapper/ || echo "gradle/wrapper NOT FOUND"
-          file gradlew || true
-          head -5 gradlew || true
-
-      - name: Fix line endings + Grant permission
-        run: |
-          sed -i 's/\r$//' gradlew
-          chmod +x gradlew
+      - name: Grant Execute Permission for Gradle
+        run: chmod +x gradlew || true
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug --no-daemon

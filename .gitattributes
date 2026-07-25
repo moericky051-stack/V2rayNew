@@ -1,0 +1,8 @@
+# Keep binary files untouched by Git text conversion
+*.jar binary
+*.png binary
+*.jpg binary
+
+# Line endings
+gradlew text eol=lf
+*.bat text eol=crlf
